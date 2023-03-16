@@ -27,8 +27,8 @@ class FFmpeg extends Duplex {
    * @param {Array<string>} options.args Arguments to pass to FFmpeg
    * @param {boolean} [options.shell=false] Whether FFmpeg should be spawned inside a shell
    * @example
-   * // By default, if you don't specify an input (`-i ...`) prism will assume you're piping a stream into it.
-   * const transcoder = new prism.FFmpeg({
+   * // By default, if you don't specify an input (`-i ...`) fury will assume you're piping a stream into it.
+   * const transcoder = new fury.FFmpeg({
    *  args: [
    *    '-analyzeduration', '0',
    *    '-loglevel', '0',
@@ -38,7 +38,7 @@ class FFmpeg extends Duplex {
    *  ]
    * });
    * const s16le = mp3File.pipe(transcoder);
-   * const opus = s16le.pipe(new prism.opus.Encoder({ rate: 48000, channels: 2, frameSize: 960 }));
+   * const opus = s16le.pipe(new fury.opus.Encoder({ rate: 48000, channels: 2, frameSize: 960 }));
    */
   constructor(options = {}) {
     super();
@@ -110,7 +110,7 @@ class FFmpeg extends Duplex {
    * @returns {FFmpegInfo}
    * @throws Will throw an error if FFmpeg cannot be found.
    * @example
-   * const ffmpeg = prism.FFmpeg.getInfo();
+   * const ffmpeg = fury.FFmpeg.getInfo();
    *
    * console.log(`Using FFmpeg version ${ffmpeg.version}`);
    *

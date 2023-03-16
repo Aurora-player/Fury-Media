@@ -9,7 +9,7 @@ const OPUS_HEAD = Buffer.from([...'OpusHead'].map(x => x.charCodeAt(0)));
  * @example
  * const fs = require('fs');
  * const file = fs.createReadStream('./audio.webm');
- * const demuxer = new prism.opus.WebmDemuxer();
+ * const demuxer = new fury.opus.WebmDemuxer();
  * const opus = file.pipe(demuxer);
  * // opus is now a ReadableStream in object mode outputting Opus packets
  */

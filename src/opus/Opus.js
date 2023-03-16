@@ -1,5 +1,3 @@
-// Partly based on https://github.com/Rantanen/node-opus/blob/master/lib/Encoder.js
-
 const { Transform } = require('stream');
 const loader = require('../util/loader');
 
@@ -69,7 +67,7 @@ class OpusStream extends Transform {
    * @type {string}
    * @readonly
    * @example
-   * console.log(`Using Opus module ${prism.opus.Encoder.type}`);
+   * console.log(`Using Opus module ${fury.opus.Encoder.type}`);
    */
   static get type() {
     return Opus.name;
@@ -131,7 +129,7 @@ class OpusStream extends Transform {
  * @extends opus.OpusStream
  * @memberof opus
  * @example
- * const encoder = new prism.opus.Encoder({ frameSize: 960, channels: 2, rate: 48000 });
+ * const encoder = new fury.opus.Encoder({ frameSize: 960, channels: 2, rate: 48000 });
  * pcmAudio.pipe(encoder);
  * // encoder will now output Opus-encoded audio packets
  */
@@ -176,7 +174,7 @@ class Encoder extends OpusStream {
  * @extends opus.OpusStream
  * @memberof opus
  * @example
- * const decoder = new prism.opus.Decoder({ frameSize: 960, channels: 2, rate: 48000 });
+ * const decoder = new fury.opus.Decoder({ frameSize: 960, channels: 2, rate: 48000 });
  * input.pipe(decoder);
  * // decoder will now output PCM audio
  */

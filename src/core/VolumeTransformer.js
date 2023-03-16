@@ -16,7 +16,7 @@ class VolumeTransformer extends Transform {
    * @example
    * // Half the volume of a signed 16-bit little-endian PCM stream
    * input
-   *  .pipe(new prism.VolumeTransformer({ type: 's16le', volume: 0.5 }))
+   *  .pipe(new fury.VolumeTransformer({ type: 's16le', volume: 0.5 }))
    *  .pipe(writeStream);
    */
   constructor(options = {}) {
